@@ -34,5 +34,5 @@ button.addEventListener("click", (e) => {
 
 // The only error is that i need to press twice the ok button from the alarm message, for the message to dissapear.
 // I thnk the problem is that the form is being submitted twice - once when the button is clicked, and once when the alert message is dismissed.
-// To prevent this, you can add an event listener to the form's submit event and call the preventDefault() method to prevent the default form submission behavior.
+// To prevent this, i added an event listener to the form's submit event and call the preventDefault() method to prevent the default form submission behavior.
 // The prevent method : e.preventdefault() didn`t worked !
