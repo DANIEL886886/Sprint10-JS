@@ -1,24 +1,34 @@
 document.addEventListener("DOMContentLoaded", () => {
-       //it worked only after i initialized both form and button and after i changed the button type from submit to click.
+
+       //it worked only after i added the DOMcontentloader event and after I initialized both form and button and changed the button type from submit to click.
        const form = document.getElementById("contact-form");
        const button = document.getElementById("button");
 
-  button.addEventListener("click", (e) => {
+button.addEventListener("click", (e) => {
+         
+       // this line is to prevent the form to load twice
        e.preventDefault();
+         
+       // constants declaration : name, email, text, formData
        const formData = new FormData(form);
-       alert("Un email la adresa myemail@gmail.com a fost trimis. Va multumesc !");
+       const nume = formData.get("nume")
+       const email = formData.get("email")
+       const text = formData.get("text")
+       
+       // alert message with ok button
+       alert("\n" + "\n" + "Un email la adresa: " + email + " a fost trimis." + "\n" + "\n" + "Va multumesc !");
 
        // print into the console the form information  
        console.log("This is the information extracted from the user-form: ")
-       const nume = formData.get("nume"); console.log(`Nume: ${nume}`);
-       const email = formData.get("email"); console.log(`Email: ${email}`);
-       const text = formData.get("text"); console.log(`Mesaj: ${text}`);
+       console.log(`Nume: ${nume}`);
+       console.log(`Email: ${email}`);
+       console.log(`Mesaj: ${text}`);
 
        // empty the input cell boxes after the information was printed on the console
        const inputs = form.querySelectorAll('input');
-       inputs.forEach(input => input.value = '');
+              inputs.forEach(input => input.value = '');
        const textarea = form.querySelectorAll('textarea');
-       textarea.forEach(textarea=> textarea.value = '');
+              textarea.forEach(textarea=> textarea.value = '');
   });
 });
 
