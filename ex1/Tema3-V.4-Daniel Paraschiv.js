@@ -3,11 +3,14 @@ document.addEventListener("DOMContentLoaded", () => {
     //it worked only after i added the DOMcontentloader event and after I initialized both form and button and changed the button type from submit to click.
     const form = document.getElementById("contact-form");
     const button = document.getElementById("button");
+    console.log("dom loaded")
 
     button.addEventListener("click", (e) => {
             
         // this line is to prevent the form to redirect to another page
         e.preventDefault();
+        
+        console.clear()
         
         // constants declaration : name, email, text, formData
         const formData = new FormData(form);
