@@ -33,6 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const textarea = form.querySelectorAll('textarea');
                 textarea.forEach(textarea=> textarea.value = '');
     });
+
 });
 
 // The only error is that i need to press twice the ok button from the alarm message, for the message to dissapear.
