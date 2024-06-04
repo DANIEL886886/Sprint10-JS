@@ -1,3 +1,5 @@
+console.clear()
+
 document.addEventListener("DOMContentLoaded", () => {
 
     //it worked only after i added the DOMcontentloader event and after I initialized both form and button and changed the button type from submit to click.
