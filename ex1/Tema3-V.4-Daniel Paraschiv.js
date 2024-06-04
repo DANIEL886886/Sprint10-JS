@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // empty the input cell boxes after the information was printed on the console
         const inputs = form.querySelectorAll('input');
-                inputs.forEach(input => input.value = '');
+      inputs.forEach(input => input.value = '');
         const textarea = form.querySelectorAll('textarea');
                 textarea.forEach(textarea=> textarea.value = '');
     });
