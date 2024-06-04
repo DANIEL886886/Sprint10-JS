@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     button.addEventListener("click", (e) => {
             
-        // this line is to prevent the form to load twice
+        // this line is to prevent the form to redirect to another page
         e.preventDefault();
         
         // constants declaration : name, email, text, formData
